@@ -1,61 +1,42 @@
 // GET ADD EMPLOYEE FORM AND EMPLOYEE TABLE FROM THE DOM
-let form = document.querySelector('AddForm')
-let list = document.querySelector('empCount')
-// let thetable = document.getElementById('employees')
-
-// ADD ROW
-// let row = thetable.insertRow()
-// let cellid = row.insertCell('id')
-// let cellname = row.insertCell('name')
-// let cellextension = row.insertCell('extension')
-// let cellemail = row.insertCell('email')
-// let celldepartment = row.insertCell('department')
-// let celldelete = row.insertCell('department')
-
-// cellid.appendChild(document.createTextNode('id'))
-// cellname.appendChild(document.createTextNode('name'))
-// cellextension.appendChild(document.createTextNode('extension'))
-// cellemail.appendChild(document.createTextNode('email'))
-// celldepartment.appendChild(document.createTextNode('department'))
-
-// SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
-
+let form = document.querySelector('#AddForm')
+let list = document.querySelector('#employees')
+let thetable = document.getElementById('#employees')
 
 // ADD EMPLOYEE
-form.addEventListener('submit', (e) => {
-// PREVENT FORM SUBMISSION
+list.addEventListener('submit', (e) => {
+    // PREVENT FORM SUBMISSION
     e.preventDefault()
-// GET THE VALUES FROM THE TEXT BOXES
-    let newItem = document.querySelector('item').value 
-// INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
+    // GET THE VALUES FROM THE TEXT BOXES
+    let newItem = document.querySelector('addForm').value 
+    // INSERT A NEW ROW AT THE END OF THE EMPLOYEES TABLE
     let row = thetable.insertRow()
-    let cellid = row.insertCell('id')
-    let cellname = row.insertCell('name')
-    let cellextension = row.insertCell('extension')
-    let cellemail = row.insertCell('email')
-    let celldepartment = row.insertCell('department')
-    let celldelete = row.insertCell('department')
-// INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
+    // INSERT A CELL FOR EACH ITEM WITHIN THE NEW ROW
+    let cellid = row.insertCell()
+    let cellname = row.insertCell()
+    let cellextension = row.insertCell()
+    let cellemail = row.insertCell()
+    let celldepartment = row.insertCell()
+    let celldelete = row.insertCell()
+    // APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
     cellid.appendChild(document.createTextNode('id'))
     cellname.appendChild(document.createTextNode('name'))
     cellextension.appendChild(document.createTextNode('extension'))
     cellemail.appendChild(document.createTextNode('email'))
     celldepartment.appendChild(document.createTextNode('department'))
-// APPEND THE TEXT VALUES AS TEXT NODES WITHIN THE CELLS
-
 // CREATE DELETE BUTTON 
     let deleteBtn = document.createElement('button')
 // ADD BOOTSTRAP CLASSES TO STYLIZE BUTTON
-    deleteBtn.className 'btn btn-danger btn-sm float-end'
+    deleteBtn.className = 'btn btn-danger btn-sm float-end'
 // CREATE TEXT NODE FOR DELETE BUTTON AND SET TO 'X'
-    let textDelete document.createTextNode('X')
+    let textDelete = document.createTextNode('X')
 //APPEND TEXT NODE TO DELETE BUTTON
     deleteBtn.appendChild(textDelete)
     li.appendChild(deleteBtn) 
-    
     // RESET THE FORM
     form.reset()
     // SET FOCUS BACK TO THE ID TEXT BOX
+})
 
 // DELETE EMPLOYEE
 // EVENT HANDLER TO HANDLE DELETE BUTTON 
@@ -71,6 +52,10 @@ list.addEventListener('click', (e) => {
         } 
 }
 })
+
+
+
+
 
 
 
@@ -103,3 +88,21 @@ form.addEventListener('submit', (e) => {
 })
 
 // DELETE EMPLOYEE
+
+
+// ADD ROW
+// let row = thetable.insertRow()
+// let cellid = row.insertCell('id')
+// let cellname = row.insertCell('name')
+// let cellextension = row.insertCell('extension')
+// let cellemail = row.insertCell('email')
+// let celldepartment = row.insertCell('department')
+// let celldelete = row.insertCell('department')
+
+// cellid.appendChild(document.createTextNode('id'))
+// cellname.appendChild(document.createTextNode('name'))
+// cellextension.appendChild(document.createTextNode('extension'))
+// cellemail.appendChild(document.createTextNode('email'))
+// celldepartment.appendChild(document.createTextNode('department'))
+
+// SET A COUNT VARIABLE TO DISPLAY NEXT TO EMPLOYEES HEADER
