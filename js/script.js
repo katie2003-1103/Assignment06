@@ -58,7 +58,7 @@ thetable.addEventListener('click', (e) => {
 
 // FUNCTION TO SHOW OR HIDE 'NO TASKS" ALERT
 function checkMessageDisplay() {
-    if (thetable.children.length) === 0 {
+    if (thetable.children.length === 0) {
     document.querySelector('span').classList.add('show')
     } else { 
     document.querySelector('span').classList.remove('show')
